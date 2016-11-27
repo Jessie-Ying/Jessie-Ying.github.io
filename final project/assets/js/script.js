@@ -63,3 +63,4 @@ $("#commenttext").hover(function() {
 $("#commenttext").mouseout(function() {
 	$("#comment").hide();
 });
+});
