@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="assets/js/script.js"></script>
+          <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Pacifico" rel="stylesheet">
+        
+	</head>
+	<body>
+		<nav id="navbar">
+			<ul>
+			<a href="#home-container">
+				<li class="navbartitle">Home</li>
+			</a>
+			<a href="#description-container">
+				<li class="navbartitle">Review</li>
+			</a>
+			<a href="#review-container">
+				<li class="navbartitle">Contact Us</li>
+			</a>
+			</ul>
+		</nav>
+		<div id="home-container">
+			<div id="map"></div>
+			<script>
+      function initMap() {
+        var uluru = {lat: 37.868614,  lng: -122.260527};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjrzkwj0bY9yEkVG7rVWtQ9qm0KXO0t5I&callback=initMap">
+    </script>
+			<div class="title">Where's the Best Boba in Berkeley?</div>
+		</div>
+		<div id="description-container">
+			<div class="description">
+			<img class="logo" id="name" src="assets/img/name.png">
+				<ul class= "text" id="nametext"> Name: Sharetea </ul>
+			<img class="logo" id="flavor" src="assets/img/flavor.png">
+				<ul class= "text" id="flavortext"> Flavor:★★ </ul>
+			<img class="logo" id="price" src="assets/img/price.png">
+				<ul class= "text" id="pricetext"> Price: $$ </ul>
+			<img class="logo" id="location" src="assets/img/location.png">
+				<ul class= "text" id="locationtext"> Location: 2440 Bancroft Way </ul>
+			<img class="logo" id="comment" src="assets/img/comment.png">
+				<ul class= "text" id="commenttext"> Comment: “The oolong pearl milk tea and the Okinawa pearl milk tea were both pretty good.” —— Andrew C. </ul>
+			</div>
+			<div id="gallery-container">
+				<div id="gallery-film" >
+					<img class="gallery" src="assets/img/img1.jpg">
+					<img class="gallery" src="assets/img/img2.jpg">
+					<img class="gallery" src="assets/img/img3.jpg">
+				</div>
+			</div>
+			<div id="prev">
+                     <img class="img-scaled" src="assets/img/arrowleft.png" />
+            </div>
+            <div id="next">
+                <img class="img-scaled" src="assets/img/arrowright.png" />
+            </div>
+		</div>
+		<div id="review-container">
+			<div class="input"> Store Name: <textarea></textarea></div>
+			<div class="input"> Location: <textarea></textarea></div>
+			<div class="input"> Tell us about it: <textarea></textarea></div>
+			<button type="button" id="button">Submit</button>
+			<div class="title">Where Do You Want Us to Review?</div>
+		</div>
+	</body>
+</html>
